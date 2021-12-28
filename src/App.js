@@ -11,11 +11,12 @@ const App = () => {
 
   const addCodes = (e) => {
     let codeArr = e.target.value.replace(/\s+/g, " ").split(",");
+    const finalCodes = uniq(codes.concat(codeArr).slice(0, 7));
 
-    codeArr.forEach((code) => {
+    finalCodes.forEach((code) => {
       if (code.length > 1 && !codes.includes(code)) {
         if (codes.length < 7) {
-          setCodes(uniq(codes.concat(codeArr).slice(0, 7)));
+          setCodes(finalCodes);
           e.target.value = null;
         }
       }

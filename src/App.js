@@ -10,7 +10,11 @@ const App = () => {
   console.log(codes);
 
   const addCodes = (e) => {
-    let codeArr = e.target.value.replace(/\s+/g, " ").split(",");
+    let codeArr = e.target.value
+      .replace(/\s+/g, " ")
+      .split(",")
+      .map((code) => code.toLowerCase());
+
     const finalCodes = uniq(codes.concat(codeArr).slice(0, 7));
 
     finalCodes.forEach((code) => {

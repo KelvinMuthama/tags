@@ -59,6 +59,7 @@ body{
   background: #F2F2F2;
   padding: 5px 8px 5px 10px;
   border: 1px solid #e3e1e1;
+  text-transform: none;
 }
 .content ul li i{
   height: 20px;
@@ -70,6 +71,7 @@ body{
   border-radius: 50%;
   background: #dfdfdf;
   justify-content: center;
+  
 }
 .content ul input{
   flex: 1;
@@ -77,6 +79,7 @@ body{
   border: none;
   outline: none;
   font-size: 16px;
+  text-transform: none;
 }
 .wrapper .details{
   justify-content: space-between;
